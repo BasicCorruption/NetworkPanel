@@ -18,26 +18,25 @@
             <h1>Network Control Hub</h1>
         </div>
         <div class="content">
-            <div class="selectorbox">
-                <div class="sidebar">
-                    <button class="tablinks" onclick="openPanel(event, 'subnet1')">Subnet 1 (10.0.0.1)</button>
-                    <button class="tablinks" onclick="openPanel(event, 'subnet2')">Subnet 2 (10.64.0.1)</button>
-                    <button class="tablinks" onclick="openPanel(event, 'subnet3')">Subnet 3 (10.128.0.1)</button>
-                    <button class="tablinks" onclick="openPanel(event, 'subnet4')">Subnet 4 (10.192.0.1)</button>
-                </div>
-                <div id="subnet1" class="tabcontent">
-                    <iframe src="https://x1.subnet.config.network.box" title="Subnet 1 Admin Panel"></iframe>
-                </div>
-                <div id="subnet2" class="tabcontent">
-                    <iframe src="https://x2.subnet.config.network.box" title="Subnet 2 Admin Panel"></iframe>
-                </div>
-                <div id="subnet3" class="tabcontent">
-                    <iframe src="https://x3.subnet.config.network.box" title="Subnet 3 Admin Panel"></iframe>
-                </div>
-                <div id="subnet4" class="tabcontent">
-                    <iframe src="https://x4.subnet.config.network.box" title="Subnet 4 Admin Panel"></iframe>
-                </div>
-            </div>
+            <table>
+                <tr>
+                    <th>Networking</th>
+                    <th>Management</th>
+                    <th>Security</th>
+                </tr>
+                <tr>
+                    <td><a href="https://x1.subnet.config.network.box"><img src="assets/router.png"><br><p>Subnet 1</p></a></td>
+                </tr>
+                <tr>
+                    <td><a href="https://x2.subnet.config.network.box"><img src="assets/router.png"><br><p>Subnet 2</p></a></td>
+                </tr>
+                <tr>
+                    <td><a href="https://x3.subnet.config.network.box"><img src="assets/router.png"><br><p>Subnet 3</p></a></td>
+                </tr>
+                <tr>
+                    <td><a href="https://x4.subnet.config.network.box"><img src="assets/router.png"><br><p>Subnet 4</p></a></td>
+                </tr>
+            </table>
         </div>
     </div>
 </body>
