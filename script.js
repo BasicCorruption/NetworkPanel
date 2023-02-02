@@ -18,3 +18,7 @@ function openPanel(evt, panelName) {
     document.getElementById(panelName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
+function loadPanel(url) {
+    window.location.href = `viewer.html?url=${encodeURIComponent(url)}`;
+}
