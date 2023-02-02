@@ -1,4 +1,5 @@
 table, th, td {
     border: 1px solid black;
     align-items: center;
+    align-content: center;
 }
