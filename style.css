@@ -1,5 +1,22 @@
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 table, th, td {
     border: 1px solid black;
     align-items: center;
     align-content: center;
+}
+
+#vtm {
+    height: 10%;
+}
+#vcs {
+    height: 90%;
+}
+#sitelabel {
+    height: 5%;
+}
+#pagebox {
+    height: 95%;
 }
