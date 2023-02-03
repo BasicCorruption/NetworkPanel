@@ -20,3 +20,6 @@ table, th, td {
 #pagebox {
     height: 95%;
 }
+iframe {
+    width: 100%;
+}
