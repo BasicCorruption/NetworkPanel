@@ -14,12 +14,7 @@ table, th, td {
 #vcs {
     height: 90%;
 }
-#sitelabel {
-    height: 5%;
-}
-#pagebox {
-    height: 95%;
-}
 iframe {
     width: 100%;
+    height: 56.25%;
 }
