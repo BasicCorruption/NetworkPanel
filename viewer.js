@@ -2,7 +2,9 @@ function getSiteLabel() {
     var label = document.getElementById("sitelabel");
     const queryString = window.location.search;
     console.log(queryString);
-    const url = decodeURIComponent(queryString.slice(5));
+    const params = new URLSearchParams(queryString);
+    console.log(params);
+    const url = params.get("url");
     console.log(url);
 }
 function loadSite() {
