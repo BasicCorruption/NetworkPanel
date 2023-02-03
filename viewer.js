@@ -21,8 +21,11 @@ function getSiteLabel() {
 function loadSite() {
     var box = document.getElementById("pagebox");
     const queryString = window.location.search;
+    console.log(queryString);
     const params = new URLSearchParams(queryString);
+    console.log(params);
     const url = params.get("url");
+    console.log(url);
 
     var regex = new RegExp(/[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi);
     if (url.match(regex)) {
