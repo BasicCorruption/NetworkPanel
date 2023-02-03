@@ -16,9 +16,10 @@ function getSiteLabel() {
         return;
     }
 
-    label.innerHTML = `<p>${url}</p>`;
+    label.innerHTML = `${url}`;
 }
 function loadSite() {
+    getSiteLabel();
     var box = document.getElementById("pagebox");
     const queryString = window.location.search;
     console.log(queryString);
@@ -36,5 +37,5 @@ function loadSite() {
         return;
     }
 
-    box.innerHTML = `<iframe src="${url}"></iframe>`;
+    box.src = url;
 }

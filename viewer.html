@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="style.css">
     <script src="viewer.js"></script>
 </head>
-<body>
+<body onload="loadSite();">
     <div class="container">
         <div class="header" id="vtm">
             <h1>Panel Viewer</h1>
             <a href="index.html"><button>Return</button></a>
         </div>
         <div class="content" id="vcs">
-            <div id="sitelabel" onload="getSiteLabel();"></div>
-            <div id="pagebox" onload="loadSite();"></div>
+            <p id="sitelabel"></p>
+            <iframe id="pagebox"></iframe>
         </div>
     </div>
 </body>
