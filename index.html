@@ -1,18 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loading</title>
 </head>
+
 <body>
     We are currently detecting your IP address. This is necessary to make all of the links work.
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script>
         window.location.href = "local.html";
         // this needs to be programmed:
         // send the user to local.html if they are using a local IP address
         // send the user to public.html if they are using a public IP address
+
+        function pingURL() {
+
+            // Replace this with an IP address that is available from anywhere within your local network (such as a router)
+            var URL = $("10.0.0.1").val();
+            var settings = {
+
+                // Defines the configurations
+                // for the request
+                cache: false,
+                dataType: "jsonp",
+                async: true,
+                crossDomain: true,
+                url: URL,
+                method: "GET",
+                headers: {
+                    accept: "application/json",
+                    "Access-Control-Allow-Origin": "*",
+                },
+
+                // Defines the response to be made
+                // for certain status codes
+                statusCode: {
+                    200: function (response) {
+                        window.location.href = "local.html";
+                    },
+                    400: function (response) {
+                        window.location.href = "public.html";
+                    },
+                    0: function (response) {
+                        window.location.href = "public.html";
+                    },
+                },
+            };
+
+            // Sends the request and observes the response
+            $.ajax(settings).done(function (response) {
+                console.log(response);
+            });
+        }
+
     </script>
 </body>
+
 </html>
